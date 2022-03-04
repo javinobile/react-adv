@@ -5,6 +5,8 @@ import { ProductContextProps, ProductCardProps } from '../interfaces/interfaces'
 
 import styles from '../styles/styles.module.css'
 
+
+//context para que los componentes se comuniqunen entre si sin necesidad de pasar atributos por props
 export const ProductContext = createContext({} as ProductContextProps);
 const { Provider } = ProductContext;
 
