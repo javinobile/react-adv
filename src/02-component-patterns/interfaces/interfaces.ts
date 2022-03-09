@@ -1,4 +1,3 @@
-import { ReactElement } from 'react';
 import { Props as ProductButtonProps} from '../components/ProductButtons';
 import { ProductCardProps } from '../components/ProductCard';
 import { Props as ProductImageProps} from '../components/ProductImage';
@@ -16,6 +15,10 @@ export interface ProductContextProps {
     increaseBy: ( value: number ) => void;
 }
 
+export interface onChangeProductArgs{
+    product: Product;
+    counter: number;
+}
 
 export interface ProductCardHOCProps {
     ({ children, product, className }: ProductCardProps): JSX.Element,
