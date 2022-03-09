@@ -7,6 +7,11 @@ interface useProductArgs {
     value?: number;
 }
 
+interface useProductArgs {
+    product: Product;
+    onChange?: ( args: onChangeProductArgs ) => void;
+    value?: number;
+}
 
 
 export const useProduct = ({ onChange, product, value = 0 }: useProductArgs) => {

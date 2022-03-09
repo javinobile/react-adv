@@ -40,7 +40,9 @@ export const ShoppingPage = () => {
                     </ProductCard>
                 ))}
 
+                    
             </div>
+
         </div>
     )
 }
