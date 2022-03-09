@@ -1,8 +1,6 @@
 import { ProductCard } from '../components';
 import "../styles/custom-styles.css";
-import { Product } from '../interfaces/interfaces';
-import { useState } from 'react';
-import { ProductInCart, products } from '../data/product';
+import { products } from '../data/product';
 import { useShoppingCart } from '../hooks/useShoppingCart';
 
 
@@ -23,7 +21,7 @@ export const ShoppingPage = () => {
             }}>
 
                 {products.map(product => (
-                    <ProductCard value={shoppingCart[product.id] ? shoppingCart[product.id].counter : 0} onChange={(args) => onProductCountChange(args)} className='bg-dark text-white' key={product.id} product={product}>
+                    <ProductCard value={shoppingCart[product.id] ? shoppingCart[product.id].count : 0} onChange={(args) => onProductCountChange(args)} className='bg-dark text-white' key={product.id} product={product}>
                         <ProductCard.Image className='custom-image' />
                         <ProductCard.Title className='text-white' title={product.title} />
                         <ProductCard.Buttons style={{ display: 'flex', justifyContent: 'center' }} className='custom-buttons' />
@@ -34,7 +32,7 @@ export const ShoppingPage = () => {
             <div className='shopping-cart'>
 
                 {Object.entries(shoppingCart).map(([key, value]) => (
-                    <ProductCard value={value.counter} key={key} onChange={(args) => onProductCountChange(args)} style={{ width: '100px' }} className='bg-dark text-white' product={value}>
+                    <ProductCard value={value.count} key={key} onChange={(args) => onProductCountChange(args)} style={{ width: '100px' }} className='bg-dark text-white' product={value}>
                         <ProductCard.Image className='custom-image' />
                         <ProductCard.Buttons style={{ display: 'flex', justifyContent: 'center' }} className='custom-buttons' />
                     </ProductCard>

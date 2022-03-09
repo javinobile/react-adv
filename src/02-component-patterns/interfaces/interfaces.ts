@@ -17,7 +17,7 @@ export interface ProductContextProps {
 
 export interface onChangeProductArgs{
     product: Product;
-    counter: number;
+    count: number;
 }
 
 export interface ProductCardHOCProps {

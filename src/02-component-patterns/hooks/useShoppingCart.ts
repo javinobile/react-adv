@@ -1,30 +1,25 @@
 import React, { useState } from 'react'
-import { ProductInCart } from '../data/product'
-import { Product } from '../interfaces/interfaces'
+import { Product, ProductInCart } from '../interfaces/interfaces'
 
 export const useShoppingCart = () => {
 
     const [shoppingCart, setShoppingCart] = useState<{ [key: string]: ProductInCart }>({})
 
-    const onProductCountChange = ({ counter, product }: { counter: number, product: Product }) => {
+    const onProductCountChange = ({ count, product }: { count:number, product: Product }) => {
+        
+        console.log({ count })
 
-        setShoppingCart(oldShoppingCart => {
+        setShoppingCart( oldShoppingCart => {
 
-            const productInCart: ProductInCart = oldShoppingCart[product.id] || { ...product, counter: 0 }
-
-            if (Math.max(productInCart.counter + counter, 0) > 0) {
-                productInCart.counter += counter
-                return {
-                    ...oldShoppingCart,
-                    [product.id]: productInCart
-                }
+            if( count === 0 ) {
+                const {  [product.id]: toDelete, ...rest  } = oldShoppingCart;
+                return rest;
             }
 
-            const { [product.id]: toDelete, ...rest } = oldShoppingCart
             return {
-                ...rest
+                ...oldShoppingCart,
+                [ product.id ]: { ...product, count }
             }
-
         })
     }
 
