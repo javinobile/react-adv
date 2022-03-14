@@ -42,6 +42,10 @@ export const useProduct = ({ onChange, product, value = 0, initialValues }: useP
     }, [])
 
 
+    useEffect(() => {
+        isMounted.current = true;
+    }, [])
+
     return {
         counter,
         increaseBy,

@@ -56,6 +56,7 @@
 }
 
 .buttonAdd:hover {
+<<<<<<< HEAD
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -64,3 +65,14 @@
   border-left: 1px solid white !important;
   color: grey !important;
 }
+=======
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.disabled {
+    border-color: grey !important;
+    border-left: 1px solid white !important;
+    color: grey !important;
+}
+>>>>>>> d8dc3e4f51d3408e944035f0de144f99eb485776
