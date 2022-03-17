@@ -16,16 +16,11 @@ export const ShoppingPage = () => {
                 product={product}>
 
                 {
-                    ({count, reset, increaseBy, isMaxCountReached}) => (
+                    ({ count, reset, increaseBy, isMaxCountReached }) => (
                         <>
-                            <ProductCard.Image className='custom-image' />
-                            <ProductCard.Title className='text-white' title={product.title} />
-                            <ProductCard.Buttons style={{ display: 'flex', justifyContent: 'center' }} className='custom-buttons' />
-
-                            <button onClick={reset}>Reset</button>
-                            <button onClick={()=>increaseBy(-2)}>-2</button>
-                            <button hidden={isMaxCountReached} onClick={()=>increaseBy(+2)} >+2</button>
-                            <span>{count}</span>
+                            <ProductCard.Image />
+                            <ProductCard.Title title={product.title} />
+                            <ProductCard.Buttons />
                         </>
                     )
                 }
