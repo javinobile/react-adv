@@ -31,12 +31,6 @@ export const Navigation = () => {
             <li>
               <NavLink to="/formik-abstract" activeClassName="nav-active" exact>Formik - Abstract</NavLink>
             </li>
-            <li>
-              <NavLink to="/about" activeClassName="nav-active" exact>About</NavLink>
-            </li>
-            <li>
-              <NavLink to="/users" activeClassName="nav-active" exact>Users</NavLink>
-            </li>
           </ul>
         </nav>
 
@@ -57,9 +51,6 @@ export const Navigation = () => {
           </Route>
           <Route path="/formik-abstract">
             <FormikAbstractPage />
-          </Route>
-          <Route path="/users">
-            <h1>Users</h1>
           </Route>
           <Route path="/">
             <h1>Home</h1>
