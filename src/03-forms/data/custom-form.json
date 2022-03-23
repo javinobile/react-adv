@@ -2,11 +2,16 @@
     {
         "type": "input",
         "name": "firstName",
+<<<<<<< HEAD
         "placeholder": "Javier",
+=======
+        "placeholder": "Fernando",
+>>>>>>> 6751ffa5a6a6c0b60ab498e2e49a23a3d849d16f
         "label": "First Name",
         "value": "",
         "validations": [
             {
+<<<<<<< HEAD
                 "name": "required",
                 "message": "First Name is required"
             },
@@ -14,41 +19,68 @@
                 "name": "minLength",
                 "chars" : "3",
                 "message": "Al menos 3 caracteres"
+=======
+                "type": "required"
+            },
+            {
+                "type": "minLength",
+                "value": 5
+>>>>>>> 6751ffa5a6a6c0b60ab498e2e49a23a3d849d16f
             }
         ]
     },
     {
         "type": "input",
         "name": "lastName",
+<<<<<<< HEAD
         "placeholder": "Nóbile",
+=======
+        "placeholder": "Herrera",
+>>>>>>> 6751ffa5a6a6c0b60ab498e2e49a23a3d849d16f
         "label": "Last Name",
         "value": "",
         "validations": [
             {
+<<<<<<< HEAD
                 "name": "required",
                 "message": "Last Name is required"
+=======
+                "type": "required"
+>>>>>>> 6751ffa5a6a6c0b60ab498e2e49a23a3d849d16f
             }
         ]
     },
     {
         "type": "email",
         "name": "email",
+<<<<<<< HEAD
         "placeholder": "javi@javi.com",
+=======
+        "placeholder": "fernando@google.com",
+>>>>>>> 6751ffa5a6a6c0b60ab498e2e49a23a3d849d16f
         "label": "Email",
         "value": "",
         "validations": [
             {
+<<<<<<< HEAD
                 "name": "required",
                 "message": "Mail is required"
             },
             {
                 "name": "email",
                 "message": "Mail is not valid"
+=======
+                "type": "required"
+            },
+            {
+                "type": "email"
+>>>>>>> 6751ffa5a6a6c0b60ab498e2e49a23a3d849d16f
             }
         ]
     },
     {
         "type": "select",
+<<<<<<< HEAD
         "name": "favouriteGame",
         "label": "Favourite Game",
         "value": "",
@@ -84,3 +116,27 @@
         "value": false
     }
 ]
+=======
+        "name": "favoriteGame",
+        "label": "Favorite Game",
+        "value": "",
+        "options": [{
+            "id": 1,
+            "label": "Super Smash"
+        },
+        {
+            "id": 2,
+            "label": "Metal Gear"
+        },
+        {
+            "id": 3,
+            "label": "Resident Evil"
+        }],
+        "validations": [
+            {
+                "type": "required"
+            }
+        ]
+    }
+]
+>>>>>>> 6751ffa5a6a6c0b60ab498e2e49a23a3d849d16f
