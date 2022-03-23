@@ -1,0 +1,86 @@
+[
+    {
+        "type": "input",
+        "name": "firstName",
+        "placeholder": "Javier",
+        "label": "First Name",
+        "value": "",
+        "validations": [
+            {
+                "name": "required",
+                "message": "First Name is required"
+            },
+            {
+                "name": "minLength",
+                "chars" : "3",
+                "message": "Al menos 3 caracteres"
+            }
+        ]
+    },
+    {
+        "type": "input",
+        "name": "lastName",
+        "placeholder": "Nóbile",
+        "label": "Last Name",
+        "value": "",
+        "validations": [
+            {
+                "name": "required",
+                "message": "Last Name is required"
+            }
+        ]
+    },
+    {
+        "type": "email",
+        "name": "email",
+        "placeholder": "javi@javi.com",
+        "label": "Email",
+        "value": "",
+        "validations": [
+            {
+                "name": "required",
+                "message": "Mail is required"
+            },
+            {
+                "name": "email",
+                "message": "Mail is not valid"
+            }
+        ]
+    },
+    {
+        "type": "select",
+        "name": "favouriteGame",
+        "label": "Favourite Game",
+        "value": "",
+        "options": [
+            {
+                "id": 1,
+                "name": "Call of Duty"
+            },
+            {
+                "id": 2,
+                "name": "Super Mario"
+            },
+            {
+                "id": 3,
+                "name": "Toki"
+            },
+            {
+                "id": 4,
+                "name": "Metal Gear"
+            }
+        ],
+        "validations": [
+            {
+                "name": "required",
+                "message": "Select Option"
+            }
+        ]
+    },
+    {
+        "type": "checkbox",
+        "name": "terms",
+        "label": "Terminos y condiciones",
+        "value": false
+    }
+]

@@ -1,4 +1,3 @@
-import React from 'react'
 import '../styles/styles.css'
 
 import { useFormik, FormikErrors } from 'formik'
@@ -33,7 +32,7 @@ export const FormikBasicPage = () => {
 
     }
 
-    const { handleChange, handleSubmit, handleBlur, errors, touched, handleReset, values } = useFormik({
+    const { handleChange, handleSubmit, handleBlur, errors, touched, values } = useFormik({
         initialValues: {
             name: '',
             lastName: '',
